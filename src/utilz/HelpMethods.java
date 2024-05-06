@@ -68,7 +68,10 @@ public class HelpMethods {
 
     // Metodo para saber si lo que se va a pisar es suelo (Para enemigos)
     public static boolean IsFloor(Rectangle2D.Float hitbox, float xSpeed, int[][] lvlData) {
-        return IsSolid(hitbox.x + xSpeed, hitbox.y + hitbox.height + 1, lvlData);
+        if (xSpeed > 0)
+            return IsSolid(hitbox.x + hitbox.width +  xSpeed,  hitbox.y + hitbox.height + 1, lvlData);
+        else
+            return IsSolid(hitbox.x + xSpeed, hitbox.y + hitbox.height + 1, lvlData);
     }
     // Con la funcion isTileSolid reccorremos cada casilla dada en los parametros buscando algun obstaculo
     public static boolean IsTileWalkable(int xStart, int xEnd, int y ,int [][] lvlData){

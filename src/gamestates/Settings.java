@@ -34,7 +34,7 @@ public class Settings extends State implements Statemethods{
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(background,0,0,1248,672,null);
+        g.drawImage(background,0,0,Game.GAME_WIDTH,Game.GAME_HEIGHT,null);
         g.drawImage(settings,bgX,bgY,bgW,bgH,null);
         bgW = settings.getWidth();
         bgH = settings.getHeight();

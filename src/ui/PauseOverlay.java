@@ -60,8 +60,8 @@ public class PauseOverlay {
     // Carga de la imagen y establecer las medidas y lugar
     private void loadBackground() {
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PAUSE_BACKGROUND_MENU);
-        bgW = backgroundImg.getWidth();
-        bgH = backgroundImg.getHeight();
+        bgW = (int) ((backgroundImg.getWidth()/1.5) * Game.SCALE);
+        bgH = (int) ((backgroundImg.getHeight()/1.5) * Game.SCALE);
         bgX = Game.GAME_WIDTH / 2 - bgW / 2;
         bgY = (int) (55 * Game.SCALE);
 
@@ -131,23 +131,6 @@ public class PauseOverlay {
         menuB.resetBooleans();
         replayB.resetBooleans();
         unpauseB.resetBooleans();
-    }
-
-
-    public void mouseMoved(MouseEvent e) {
-        musicButton.setMouseOver(false);
-        sfxButton.setMouseOver(false);
-
-        menuB.setMouseOver(false);
-        replayB.setMouseOver(false);
-        unpauseB.setMouseOver(false);
-
-        if (isIn(e,menuB))
-            menuB.setMouseOver(true);
-        else if (isIn(e,replayB))
-            replayB.setMouseOver(true);
-        else if (isIn(e,unpauseB))
-            unpauseB.setMouseOver(true);
     }
 
     public void mouseDragged(MouseEvent e){}

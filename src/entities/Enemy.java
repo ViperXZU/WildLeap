@@ -82,6 +82,7 @@ public abstract class Enemy extends Entity{
 
     // Verifica que el jugador esta lo suficientemente cerca para atacar
     protected boolean isPlayerCloseForAttack(Player player){
+
         int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
         return absValue <= attackDistance;
     }
