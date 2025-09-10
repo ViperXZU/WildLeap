@@ -95,7 +95,6 @@ public class LoadSave {
 //            System.out.println("file: "+ f.getName());
 
         BufferedImage[] imgs = new BufferedImage[filesSorted.length];
-        for (int)
         return null;
     }
 
