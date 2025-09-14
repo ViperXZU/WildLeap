@@ -26,7 +26,7 @@ public class Game implements Runnable {
 
      //Variables que determinan el tamano del juego
      public final static int TILES_DEFAULT_SIZE =32;
-     public final static float SCALE = 1.5f; // Muy importante esta variable dependiendo de que tan grande queremos que se vea el juego se va modificando
+     public final static float SCALE = 1.6f; // Muy importante esta variable dependiendo de que tan grande queremos que se vea el juego se va modificando
      public final static int TILES_IN_WIDTH = 26;
      public final static int TILES_IN_HEIGHT = 14;
      public final static int TILES_SIZE = (int) (TILES_DEFAULT_SIZE * SCALE);
